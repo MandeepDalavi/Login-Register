@@ -86,3 +86,15 @@ body {
     text-decoration: none;
     color: #6c5ce7;
 }
+
+@media (max-width: 400px) {
+    .container {
+        width: 300px;
+    }
+    .container .login-social {
+        display: block;
+    }
+    .container .login-social a {
+        display: block;
+    }
+}
