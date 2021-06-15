@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['username'])) {
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +23,7 @@
 </head>
 <body>
     <div class="container">
-        <p class="welcome">Welcome</p>
+        <p class="welcome">Welcome <?php echo "<p class='user'>" . $_SESSION['username'] . "</p>"; ?></p>
         <div class="input-group">
             <button class="btn" onclick="location.href='logout.php'" type="button">Logout</button>
         </div>
